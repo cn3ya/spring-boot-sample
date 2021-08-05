@@ -8,7 +8,6 @@ wget 'https://start.spring.io/starter.zip?type=gradle-project&language=java&boot
 unzip sample-project.zip
 
 # use vscode extension
-
 ```
 
 ## run
