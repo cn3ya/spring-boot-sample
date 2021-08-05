@@ -1,3 +1,16 @@
 {
+    "editor.fontFamily": "JetBrains Mono",
+    "editor.fontSize": 16,
+    "editor.fontLigatures": "true",
+    "editor.fontWeight": "normal",
+    "debug.console.fontFamily": "Fira Code,JetBrains Mono",
+    "scm.inputFontFamily": "Fira Code,JetBrains Mono",
+    "terminal.integrated.fontFamily": "monospace",
+    "rest-client.fontFamily": "Fira Code,JetBrains Mono",
+    "rest-client.fontSize": 15,
+    "window.zoomLevel": 1.0,
+    "window.autoDetectColorScheme": true,
+    "workbench.colorTheme": "Night Owl (No Italics)",
+    "workbench.tree.indent": 16,
     "java.configuration.updateBuildConfiguration": "disabled"
 }

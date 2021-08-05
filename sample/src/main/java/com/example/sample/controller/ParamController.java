@@ -9,17 +9,17 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/param")
 public class ParamController {
 
-    @RequestMapping(value="/get")
+    @GetMapping(value="/get")
 	public Response get(GetReq getReq) {
 		return Response.ok(getReq.getName());
 	}
 
-	@RequestMapping(value="/post")
+	@PostMapping(value="/post")
 	public Response post(@RequestBody GetReq getReq) {
 		return Response.ok(getReq);
 	}
 
-	@RequestMapping(value="/path/{id}")
+	@GetMapping(value="/path/{id}")
 	public Response path(@PathVariable int id) {
 		return Response.ok(id);
 	}
