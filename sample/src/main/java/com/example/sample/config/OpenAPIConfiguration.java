@@ -15,6 +15,7 @@ public class OpenAPIConfiguration {
 
     @Bean
     public OpenAPI openAPI() {
-        return new OpenAPI().addServersItem(new Server().url(contextPath));
+        return new OpenAPI()
+                .addServersItem(new Server().url(contextPath));
     }
 }

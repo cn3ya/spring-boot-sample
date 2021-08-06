@@ -15,7 +15,7 @@ public class LogAspect {
 
     @Around("@annotation(org.springframework.web.bind.annotation.GetMapping)")
     public Object checkSomethingAround(ProceedingJoinPoint joinPoint) throws Throwable {
-        LOG.info("Args={}",joinPoint.getArgs());
+        LOG.info("Request={}",joinPoint.getArgs());
         Object result = joinPoint.proceed();
         LOG.info("Response={}",result);
         return result;
