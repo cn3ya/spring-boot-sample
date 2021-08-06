@@ -9,7 +9,7 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '8'
 
 ext {
-	springVersion = "2.5.3"
+	springVersion = '2.5.3'
 }
 
 configurations {
