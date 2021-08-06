@@ -23,22 +23,22 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-actuator:$ext.springVersion'
-	implementation 'org.springframework.boot:spring-boot-starter-quartz:$ext.springVersion'
-	implementation 'org.springframework.boot:spring-boot-starter-validation:$ext.springVersion'
-	implementation ('org.springframework.boot:spring-boot-starter-web:$ext.springVersion') {
-		exclude group: 'org.springframework.boot', module: 'spring-boot-starter-tomcat'
+	implementation "org.springframework.boot:spring-boot-starter-actuator:$springVersion"
+	implementation "org.springframework.boot:spring-boot-starter-quartz:$springVersion"
+	implementation "org.springframework.boot:spring-boot-starter-validation:$springVersion"
+	implementation ("org.springframework.boot:spring-boot-starter-web:$springVersion") {
+		exclude group: "org.springframework.boot", module: "spring-boot-starter-tomcat"
 	}
-	implementation 'org.springframework.boot:spring-boot-starter-jetty:$ext.springVersion'
-	implementation 'org.springframework.boot:spring-boot-starter-aop'
-	// implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.0'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test:$ext.springVersion'
-	developmentOnly 'org.springframework.boot:spring-boot-devtools:$ext.springVersion'
+	implementation "org.springframework.boot:spring-boot-starter-jetty:$springVersion"
+	implementation "org.springframework.boot:spring-boot-starter-aop:$springVersion"
+	// implementation "org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.0"
+	testImplementation "org.springframework.boot:spring-boot-starter-test:$springVersion"
+	developmentOnly "org.springframework.boot:spring-boot-devtools:$springVersion"
 
-	implementation 'org.springdoc:springdoc-openapi-ui:1.5.10'
+	implementation "org.springdoc:springdoc-openapi-ui:1.5.10"
 
-	compileOnly 'org.projectlombok:lombok:1.18.20'
-	annotationProcessor 'org.projectlombok:lombok:1.18.20'
+	compileOnly "org.projectlombok:lombok:1.18.20"
+	annotationProcessor "org.projectlombok:lombok:1.18.20"
 }
 
 test {

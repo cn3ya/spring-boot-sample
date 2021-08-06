@@ -5,9 +5,10 @@ import lombok.Data;
 @Data
 public class Response {
     
-    private boolean success = true;
-    private String msg = "ok";
-    private Object data = null;
+    private boolean success;
+    private String msg;
+    private Object data;
+    private String requestId = "";
 
     public Response(boolean success, String msg, Object data) {
         this.success = success;
