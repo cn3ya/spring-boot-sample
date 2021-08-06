@@ -6,7 +6,11 @@ plugins {
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
+sourceCompatibility = '8'
+
+ext {
+	springVersion = "2.5.3"
+}
 
 configurations {
 	compileOnly {
@@ -19,21 +23,22 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-actuator'
-	implementation 'org.springframework.boot:spring-boot-starter-quartz'
-	implementation 'org.springframework.boot:spring-boot-starter-validation'
-	implementation ('org.springframework.boot:spring-boot-starter-web') {
+	implementation 'org.springframework.boot:spring-boot-starter-actuator:$ext.springVersion'
+	implementation 'org.springframework.boot:spring-boot-starter-quartz:$ext.springVersion'
+	implementation 'org.springframework.boot:spring-boot-starter-validation:$ext.springVersion'
+	implementation ('org.springframework.boot:spring-boot-starter-web:$ext.springVersion') {
 		exclude group: 'org.springframework.boot', module: 'spring-boot-starter-tomcat'
 	}
-	implementation 'org.springframework.boot:spring-boot-starter-jetty'
+	implementation 'org.springframework.boot:spring-boot-starter-jetty:$ext.springVersion'
+	implementation 'org.springframework.boot:spring-boot-starter-aop'
 	// implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.0'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test:$ext.springVersion'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools:$ext.springVersion'
 
-	implementation 'org.springdoc:springdoc-openapi-ui:1.5.2'
+	implementation 'org.springdoc:springdoc-openapi-ui:1.5.10'
 
-	compileOnly 'org.projectlombok:lombok'
-	annotationProcessor 'org.projectlombok:lombok'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	compileOnly 'org.projectlombok:lombok:1.18.20'
+	annotationProcessor 'org.projectlombok:lombok:1.18.20'
 }
 
 test {
