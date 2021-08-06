@@ -24,7 +24,15 @@ public class Response {
         return new Response(true, msg, null);
     }
 
+    public static Response ok(String msg, Object data) {
+        return new Response(true, msg, data);
+    }
+
     public static Response fail(String msg) {
         return new Response(false, msg, null);
+    }
+
+    public static Response fail(String msg, Object data) {
+        return new Response(false, msg, data);
     }
 }
