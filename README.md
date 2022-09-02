@@ -26,5 +26,5 @@ cd sample
 
 ## swagger
 ```
-/api/swagger-ui/index.html
+/api/swagger-ui.html
 ```

@@ -5,6 +5,10 @@ server:
   jetty:
     acceptors: 2
     selectors: 4
+  error:
+    # path: /swagger-ui.html
+    whitelabel:
+      enabled: false
 
 management:
   endpoints:
@@ -14,4 +18,4 @@ management:
 
 app:
   name: David
-  logApi: false
+  logApi: true

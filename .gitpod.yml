@@ -2,4 +2,3 @@ image: gitpod/workspace-java-17
 ports:
   - name: Web App
     port: 3000
-    onOpen: open-browser
