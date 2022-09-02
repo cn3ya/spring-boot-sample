@@ -1,4 +1,5 @@
 # spring-boot-sample
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/cn3ya/spring-boot-sample)
 
 ## spring initializr
 ```
