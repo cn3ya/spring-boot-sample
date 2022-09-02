@@ -10,7 +10,8 @@
     "rest-client.fontSize": 15,
     "window.zoomLevel": 1.0,
     "window.autoDetectColorScheme": true,
-    "workbench.colorTheme": "Night Owl (No Italics)",
+    "workbench.colorTheme": "Gitpod Dark",
     "workbench.tree.indent": 16,
-    "java.configuration.updateBuildConfiguration": "disabled"
+    "java.configuration.updateBuildConfiguration": "disabled",
+    "workbench.editor.enablePreview": false
 }
