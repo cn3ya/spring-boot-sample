@@ -9,4 +9,5 @@ import org.springframework.stereotype.Component;
 @ConfigurationProperties(prefix = "app", ignoreUnknownFields = true)
 public class AppProperties {
     private String name = "app";
+    private boolean logApi = false;
 }

@@ -22,3 +22,8 @@ cd sample
 
 ## vscode extension
 + Language Support for Java(TM) by Red Hat
+
+## swagger
+```
+/api/swagger-ui/index.html
+```

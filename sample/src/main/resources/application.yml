@@ -13,3 +13,5 @@ management:
         include: '*'
 
 app:
+  name: David
+  logApi: false
