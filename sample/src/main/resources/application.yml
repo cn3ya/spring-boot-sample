@@ -1,14 +1,17 @@
 server:
   port: 3000
-  servlet:
-    context-path: /api
   jetty:
     acceptors: 2
     selectors: 4
   error:
-    # path: /swagger-ui.html
     whitelabel:
       enabled: false
+
+spring:
+  mvc:
+    throwExceptionIfNoHandlerFound: true
+  resources:
+    addMappings: false
 
 management:
   endpoints:
