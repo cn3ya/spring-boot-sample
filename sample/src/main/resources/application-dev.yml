@@ -43,3 +43,10 @@ spring:
               user: root
               password: example
               maxConnections: 5
+          plugin:
+            jobInitializer:
+              class: org.quartz.plugins.xml.XMLSchedulingDataProcessorPlugin  
+              fileNames: quartz_job.xml
+              failOnFileNotFound: true    
+              scanInterval: 10  
+              # wrapInUserTransaction: false

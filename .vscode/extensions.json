@@ -8,6 +8,7 @@
         "richardwillis.vscode-gradle",
         "ms-azuretools.vscode-docker",
         "gabrielbb.vscode-lombok",
-        "donjayamanne.githistory"
+        "donjayamanne.githistory",
+        "mhutchie.git-graph"
     ]
   }
