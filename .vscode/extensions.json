@@ -6,8 +6,8 @@
         "vscjava.vscode-spring-initializr",
         "pivotal.vscode-spring-boot",
         "richardwillis.vscode-gradle",
-
+        "ms-azuretools.vscode-docker",
         "gabrielbb.vscode-lombok",
-        "sdras.night-owl"
+        "donjayamanne.githistory"
     ]
   }
