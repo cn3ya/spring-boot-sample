@@ -1,24 +1,3 @@
-server:
-  port: 3000
-  jetty:
-    acceptors: 2
-    selectors: 4
-  error:
-    whitelabel:
-      enabled: false
-
 spring:
-  mvc:
-    throwExceptionIfNoHandlerFound: true
-  resources:
-    addMappings: false
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
-
-app:
-  name: David
-  logApi: true
+  profiles:
+    active: dev
