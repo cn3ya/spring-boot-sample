@@ -28,12 +28,25 @@ spring:
   resources:
     addMappings: false
   quartz:
+    job-store-type: jdbc
     properties:
       org:
         quartz:
+          jobStore:
+            class: org.quartz.impl.jdbcjobstore.JobStoreTX
+            driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+            dataSource: default
+          dataSource:
+            default:
+              driver: com.mysql.cj.jdbc.Driver
+              URL: jdbc:mysql://localhost:3306/quartz
+              user: root
+              password: example
+              maxConnections: 5
           plugin:
             jobInitializer:
               class: org.quartz.plugins.xml.XMLSchedulingDataProcessorPlugin  
               fileNames: quartz_job.xml
               failOnFileNotFound: true    
               scanInterval: 10  
+              # wrapInUserTransaction: false

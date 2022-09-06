@@ -4,6 +4,11 @@
     xsi:schemaLocation="http://www.quartz-scheduler.org/xml/JobSchedulingData http://www.quartz-scheduler.org/xml/job_scheduling_data_1_8.xsd"
     version="1.8">
 
+    <processing-directives>
+        <overwrite-existing-data>false</overwrite-existing-data>
+        <ignore-duplicates>true</ignore-duplicates>
+    </processing-directives>
+
     <schedule>
         <job>
             <name>DefaultJob</name>
