@@ -17,9 +17,9 @@ app:
   name: David
   logApi: true
 
-logging:
-  level:
-    web: DEBUG
+# logging:
+#   level:
+#     web: DEBUG
 
 
 spring:
@@ -27,13 +27,22 @@ spring:
     throwExceptionIfNoHandlerFound: true
   resources:
     addMappings: false
-  quartz:
-    properties:
-      org:
-        quartz:
-          plugin:
-            jobInitializer:
-              class: org.quartz.plugins.xml.XMLSchedulingDataProcessorPlugin  
-              fileNames: quartz_job.xml
-              failOnFileNotFound: true    
-              scanInterval: 10  
+  datasource:
+    username: root
+    password: example
+    url: jdbc:mysql://localhost:3306/test?useSSL=true&useUnicode=UTF-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  # quartz:
+  #   properties:
+  #     org:
+  #       quartz:
+  #         plugin:
+  #           jobInitializer:
+  #             class: org.quartz.plugins.xml.XMLSchedulingDataProcessorPlugin  
+  #             fileNames: quartz_job.xml
+  #             failOnFileNotFound: true    
+  #             scanInterval: 10  
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

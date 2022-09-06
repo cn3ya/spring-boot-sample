@@ -9,6 +9,7 @@
         "ms-azuretools.vscode-docker",
         "gabrielbb.vscode-lombok",
         "donjayamanne.githistory",
-        "mhutchie.git-graph"
+        "mhutchie.git-graph",
+        "cweijan.vscode-mysql-client2"
     ]
   }

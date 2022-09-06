@@ -1,4 +1,11 @@
+
 image: gitpod/workspace-java-17
 ports:
   - name: Web App
     port: 3000
+  - name: Mysql
+    port: 3306
+    onOpen: ignore
+  - name: Redis
+    port: 6379
+    onOpen: ignore

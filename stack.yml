@@ -10,8 +10,8 @@ services:
     ports:
       - 3306:3306
 
-  adminer:
-    image: adminer
+  redis:
+    image: redis
     restart: always
     ports:
-      - 8080:8080
+      - 6379:6379
