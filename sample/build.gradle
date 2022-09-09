@@ -42,6 +42,7 @@ dependencies {
 	implementation 'com.baomidou:mybatis-plus-boot-starter:3.5.2'
 	testImplementation "org.springframework.boot:spring-boot-starter-test:$springVersion"
 	developmentOnly "org.springframework.boot:spring-boot-devtools:$springVersion"
+	implementation 'org.redisson:redisson-spring-boot-starter:3.17.6'
 
 	implementation "org.springdoc:springdoc-openapi-ui:1.5.10"
 

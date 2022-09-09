@@ -27,6 +27,9 @@ spring:
     throwExceptionIfNoHandlerFound: true
   resources:
     addMappings: false
+  redis:
+    redisson: 
+      file: classpath:redisson.yml
   datasource:
     username: root
     password: example

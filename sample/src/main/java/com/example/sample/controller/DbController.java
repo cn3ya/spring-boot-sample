@@ -1,5 +1,8 @@
 package com.example.sample.controller;
 
+import org.redisson.api.RBucket;
+import org.redisson.api.RedissonClient;
+import org.redisson.client.codec.StringCodec;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,9 +20,18 @@ public class DbController {
     @Autowired
     private UserMapper userMapper;
 
+    @Autowired
+    private RedissonClient redisson;
+
     @GetMapping(value="/{id}")
 	public Response path(@PathVariable int id) {
         User user = userMapper.selectById(id);
 		return Response.ok(user);
 	}
+
+    @GetMapping(value = "/cache/{key}")
+    public Response cache(@PathVariable String key) {
+        RBucket<String> value = redisson.getBucket(key, StringCodec.INSTANCE);
+        return Response.ok(value.get());
+    }
 }
