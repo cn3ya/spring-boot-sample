@@ -1,24 +1,24 @@
 package com.example.sample.aop;
 
-import com.example.sample.dto.res.Response;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;
+import org.springframework.stereotype.Component;
+
+import com.example.sample.dto.res.Response;
+
+import lombok.extern.slf4j.Slf4j;
 
 @Aspect
 @Component
 @ConditionalOnExpression(
   "${app.logApi:true}"
 )
+@Slf4j
 public class LogAspect {
-
-    private final Logger LOG = LoggerFactory.getLogger(getClass());
 
     @Pointcut("within(com.example.sample..*)")
     public void packagePoint() {}
